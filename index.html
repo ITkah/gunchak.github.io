@@ -23,7 +23,7 @@
                         <p>Володимир<br> Гунчак</p>
                     </div>
                     <div class="header_btn_box">
-                        <a href="#" class="btn_header">Реєстрацiя</a>
+                        <a href="#forms" class="btn_header btn_unchor">Реєстрацiя</a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                             <p class="main_text">
                                 Спробуйте зараз та розпочніть</br> свій бізнес вже завтра
                             </p>
-                            <a href="#" class="main_btn">Прийняти участь</a>
+                            <a href="#forms" class="main_btn btn_unchor">Прийняти участь</a>
                         </div>
                         <div class="main_section_img">
                             <img src="img/main_photo.png" alt="main_photo">
@@ -101,6 +101,22 @@
                     </div>
                 </div>
             </section>
+            <div class="invite padding">
+                <div class="container">
+                    <div class="invite_wrap">
+                        <div class="invite_info">
+                            <img src="img/icon/floower.svg" alt="icon">
+                            <p>Приходь на безкоштовний<br> вебінар та <span>почни заробляти</span> на<br> товарах з Китаю </span>вже сьогодні</span>
+                            </p>
+                        </div>
+                        <div class="invite_btn_wrap">
+                            <img src="img/icon/left.svg" alt="icon">
+                            <a href="#forms" class="invite_btn btn_unchor">Прийняти участь</a>
+                            <img src="img/icon/right.svg" alt="icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <section class="number padding">
                 <div class="container">
                     <div class="number_container">
@@ -134,9 +150,73 @@
                     </div>
                 </div>
             </section>
+            <section class="form_section padding" id="forms">
+                <div class="container">
+                    <div class="form_wrap">
+                        <form class="form_feedback">
+                            <label>Имя</label>
+                            <input type="text" maxlength="30" name="name" required>
+                            <label>Телефон</label>
+                            <input type="text" class="phone" name="phone" maxlength="30" required>
+                            <label>E-mail</label>
+                            <input type="email" name="email" required>
+                            <button type="submit">Прийняти участь</button>
+                        </form>
+                        <div class="form_info">
+                            <h3 class="form_title">Запрошую тебе на вебінар!<br> Обіцяю, <span>буде цікаво.</span> </h3>
+                            <p class="form_title">Ми починаємо<br> <span>10 січня 2021 року о 19:00</span><small> за київським часом</small></p>
+                            <p class="form_text">Без затягнутих вступів, з перших хвилин -<br> максимально корисний контент.<span> </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+        <footer>
+            <div class="container padding">
+                <div class="footer_container">
+                    <div class="logo_box">
+                        <img src="img/icon/logo.svg" alt="logo">
+                        <p>Володимир<br> Гунчак</p>
+                    </div>
+                    <div class="footer_link">
+                        <a href="#polit" class="popup-with-zoom-anim">Політика конфіденційності</a>
+                        <p>2020. © Деякі права захищені</p>
+                    </div>
+                    <div class="footer_social_wrap">
+                        <a href="#" target="_blank">
+                            <img src="img/icon/yt.svg" alt="icon">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="img/icon/tiktok.svg" alt="icon">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="img/icon/tg.svg" alt="icon">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="img/icon/fb.svg" alt="icon">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="img/icon/inst.svg" alt="icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <a class="popup-with-zoom-anim thank_click" href="#thank"></a>
+
+ 
+
+    <div id="thank" class="zoom-anim-dialog mfp-hide">
+        <p>Спасибо за заявку</p>
+    </div>
+
+    <div id="polit" class="zoom-anim-dialog politika mfp-hide">
+        <p>Тут политика</p>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/magnific-popup.min.js"></script>
     <script src="js/common.js"></script>

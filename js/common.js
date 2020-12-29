@@ -16,27 +16,31 @@ $('.popup-with-zoom-anim').magnificPopup({
 
 
 
-$(".call_timer").on("click", function(e) {
-    e.preventDefault();
-    $(".timer_back").show();
-    var timer2 = "1:00";
-    var interval = setInterval(function() {
-        var timer = timer2.split(':');
-        //by parsing integer, I avoid all extra string processing
-        var minutes = parseInt(timer[0], 10);
-        var seconds = parseInt(timer[1], 10);
-        --seconds;
-        minutes = (seconds < 0) ? --minutes : minutes;
-        if (minutes < 0) clearInterval(interval);
-        seconds = (seconds < 0) ? 59 : seconds;
-        seconds = (seconds < 10) ? '0' + seconds : seconds;
-        //minutes = (minutes < 10) ?  minutes : minutes;
-        $('.countdown').html(minutes + ':' + seconds);
-        timer2 = minutes + ':' + seconds;
-    }, 1000);
+$(".btn_unchor").on("click", function(event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top - 70;
+    $('body,html').animate({ scrollTop: top }, 1500);
+});
 
-    function closeTimer() {
-        $(".timer_back").hide();
-    }
-    setTimeout(closeTimer, 60000);
+$('.phone').on('input', function() {
+    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''))
+});
+
+$(".form_feedback").submit(function(e) {
+    e.preventDefault();
+    let form_data = $(this).serializeArray();
+    $.ajax({
+        type: "POST",
+        url: "../../mail.php",
+        data: form_data,
+        success: function(response) {
+            console.log(response);
+            $(".thank_click").click();
+        },
+        error: function(error) {
+            $(".thank_click").click();
+        }
+    });
+    return false;
 });
